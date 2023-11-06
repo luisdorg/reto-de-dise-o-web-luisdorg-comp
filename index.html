@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;500&display=swap" rel="stylesheet">
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Social proof section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body{
+        font-family: 'League Spartan', sans-serif;
+        max-width: 1440px;
+        min-width: 375px;
+
+      }
+      
+      .attribution {
+        align-items: flex-end;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .card{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        flex-direction: column;
+      }
+      .card__perfil1{ 
+        margin:auto;
+        height: 50%;
+        padding: 10px; 
+        color: white;
+        background-color: hsl(300, 43%, 22%);
+        border: 0px;
+        border-radius: 5px;
+        width: 350px;
+        justify-content: space-around;
+      }.card__perfil2{ 
+        position: relative;
+        top: 20px; 
+        margin:auto;
+        height: 50%;
+        padding: 10px;
+        color: white;
+        background-color: hsl(300, 43%, 22%);
+        border: 0px;
+        border-radius: 5px;
+        width: 350px;
+        justify-content: space-around;
+      }
+      .card__perfil3{      
+        position: relative;
+        height: 50%;
+        top: 40px;  
+        margin:auto;
+        padding: 10px;
+        color: white;
+        background-color: hsl(300, 43%, 22%);
+        border: 0px;
+        border-radius: 5px;
+        width: 350px;
+        justify-content: space-around;
+      }
+      img{
+        width: 40px;
+        border-radius: 50%;
+      }
+      .card__nombre{
+        margin: 10px;
+        display:flex;
+        justify-content:start;
+        align-items: center;
+      }
+      .name{
+        margin-left: 50px;
+        flex-direction: column;
+      }
+      .nivel{
+        justify-content: space-around;
+        color: hsl(333, 80%, 67%);
+      }
+      .titulo_t{
+        display: flex;
+        font-weight: bold;
+        font-size: 30px;
+        color: hsl(300, 43%, 22%);
+        width: 100%;
+        text-align: center;
+      }
+      .descripcion_t{
+        margin: 10px;
+        font-size: 15px;
+        color: hsl(300, 43%, 22%);
+       /*width: 30%;*/
+       text-align: center;
+      }
+      .rated_f{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+        font-size: 20px;
+        width: 400px;
+        border: 1px;
+        background-color: hsl(300, 24%, 96%);
+      }
+      .rated_s{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+        font-size: 20px;
+        width: 400px;
+        border: 1px;
+        background-color: hsl(300, 24%, 96%);
+      }
+      .rated_t{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+        font-size: 20px;
+        width: 400px;
+        border: 1px;
+        background-color: hsl(300, 24%, 96%);
+      }
+      .star{
+        width: 15px;
+        height: 15px;
+      }
+      p{
+        margin: 0px;
+      }
+      .card__descripcion{
+        font-size: large;
+        margin: 20px 30px;
+        height: 40%;
+      }
+      .rated-container{
+        box-sizing: border-box;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .cabeza{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      @media only screen and (min-width:1440px) {
+        .body{
+          margin: 30px;
+        }
+        .rated_f{
+          display: flex;
+          flex-direction: row;
+        }
+        .contenedor_estrellas{
+          margin: 0 20px 0 0;
+        }
+        .cont_cabeza{
+          margin: 80px 20px;
+          display: flex;
+        }
+        .card{
+          margin: 50px;
+        }
+        .rated_s{
+          display: flex;
+          flex-direction: row;
+          margin-left: 80px;          
+        }
+        .rated_t{
+          display: flex;
+          flex-direction: row;
+          margin-left: 160px;
+        }
+        .cabeza{
+          font-size: 30px;
+          align-items: start;
+          width: 40%;
+          margin-left: 50px;
+          margin-right: 150px;
+         }
+         .cabeza>div{
+          text-align: left;
+         }
+         .card{
+          flex-direction: row;
+         }
+         .titulo_t{
+          width: 70%;
+          font-size: 60px;
+          color: hsl(300, 43%, 22%);
+         }
+         .descripcion_t{
+          margin-top: 40px;
+          font-size: 20px;
+          color: hsl(300, 43%, 22%);
+          line-height: 30px;          
+         }
+         .rated-container{
+          margin-top: 30px;
+         }
+      }
+    </style>
+  </head>
+  <body>  
+    <div  class="cont_cabeza">
+      <div class="cabeza">
+      <div class="titulo_t">
+      <p>10,000+ of our users love our products.</p>
+        </div>
+        <div class="descripcion_t">
+      We only provide great products combined with excellent customer service.
+      See what our satisfied customers are saying about our services.
+        </div>
+      </div>
+
+      <div class="rated-container">
+        <div class="rated_f">
+          <div class="contenedor_estrellas"> 
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">   
+          </div>
+          <span>Rated 5 Stars in Reviews</span>
+        </div>
+        <div class="rated_s">  
+          <div class="contenedor_estrellas">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+          </div>
+        <span>Rated 5 Stars in Report Guru</span>
+        </div>
+        <div class="rated_t">
+          <div class="contenedor_estrellas">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+            <img class="star" src="images/icon-star.svg">
+          </div>      
+          <span>Rated 5 Stars in BestTech</span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__perfil1">
+        <div class="card__nombre">
+          <img src="images\image-colton.jpg">
+          <div class="name">
+            <p>Colton Smith</p>
+            <p class="nivel">Verified Buyer</p>
+          </div>
+          
+        </div>
+        <div class="card__descripcion">
+          <p>"We needed the same printed design as the one we had ordered a week prior.
+            Not only did they find the original order, but we also received it in time.
+            Excellent!"</p>
+        </div>
+      </div>
+      <div class="card__perfil2">
+        <div class="card__nombre">
+          <img src="images\image-irene.jpg">
+          <div class="name">
+            <p>Irene Roberts</p>
+            <p class="nivel">Verified Buyer</p>
+          </div>
+        </div>
+        <div class="card__descripcion">
+          <p>"Customer service is always excellent and very quick turn around. Completely
+            delighted with the simplicity of the purchase and the speed of delivery."</p>
+        </div>
+      </div>
+      <div class="card__perfil3">
+        <div class="card__nombre">
+          <img src="images\image-anne.jpg">
+          <div class="name">
+            <p>Anne Wallace </p>
+            <p class="nivel">Verified Buyer</p>
+          </div>
+       </div>
+        <div class="card__descripcion">
+          <p>"Put an order with this company and can only praise them for the very high
+            standard. Will definitely use them again and recommend them to everyone!"</p>
+        </div>
+      </div>
+    </div>
+     
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Luis Enrique Gomez Doria</a>.
+    </div>
+  </body>
+</html>
